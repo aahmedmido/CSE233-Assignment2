@@ -1,0 +1,34 @@
+ This program demonstrates process creation using the fork() system call. When fork() is called, it creates a duplicate of the current process. The child process gets a return value of 0, while the parent process gets the child's PID. This allows both processes to execute different code paths.
+(2. Background Job Control (exercise2.png) =>Explanation: The & operator runs a command in the background, freeing up the terminal. The jobs command displays all background jobs currently running, showing their job numbers and status.
+(3. Process Termination (exercise3.png)=>Explanation: This demonstrates process management. ps aux | grep sleep finds all sleep processes, and kill [PID] sends a termination signal (SIGTERM) to the specified process.
+4. Process Suspension (exercis4.png)=>Explanation: This shows how to suspend and resume processes using signals. kill -STOP pauses a process, and kill -CONT resumes it. The ps command with custom format shows the process state.
+(5. Program Analysis (exercise6.png)=>Explanation: These commands analyze the compiled binary. file identifies the executable type, ldd shows shared library dependencies, readelf and objdump examine the binary structure, and LD_TRACE_LOADED_OBJECTS mimics ldd functionality.
+
+Linker and Loader Explanation
+Job of the Linker
+The linker is responsible for:
+
+Combining multiple object files into a single executable
+
+Resolving symbolic references between object files
+
+Managing memory addresses for code and data
+
+Handling static library linking
+
+Creating the final executable format (ELF, PE, etc.)
+
+Job of the Loader
+The loader is responsible for:
+
+Loading the executable into memory
+
+Setting up the process address space
+
+Resolving dynamic library dependencies at runtime
+
+Performing relocation of addresses
+
+Setting up the execution environment
+
+Transferring control to the program entry point
