@@ -1,0 +1,22 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99
+TARGETS = process_creation simple_program
+
+all: $(TARGETS)
+
+process_creation: process_creation.c
+	$(CC) $(CFLAGS) -o process_creation process_creation.c
+
+simple_program: simple_program.c
+	$(CC) $(CFLAGS) -o simple_program simple_program.c
+
+clean:
+	rm -f $(TARGETS)
+
+run-process: process_creation
+	./process_creation
+
+run-simple: simple_program
+	./simple_program
+
+.PHONY: all clean run-process run-simple
