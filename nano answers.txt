@@ -1,0 +1,24 @@
+
+1. process_creation.c:
+   - Demonstrates process creation using fork()
+   - Parent gets child PID, child gets 0
+   - Both execute concurrently
+
+2. simple_program.c:
+   - Basic C program used to demonstrate binary analysis
+
+Linker:
+- Combines multiple object files into one executable
+- Resolves symbols, assigns addresses
+
+Loader:
+- Loads executable into memory
+- Sets up memory segments
+- Resolves dynamic libraries
+- Starts program execution
+
+Process Management Exercises:
+- Exercise 2: sleep & jobs
+- Exercise 3: ps, grep, kill
+- Exercise 4: kill with STOP/CONT
+- Exercise 6: file, ldd, readelf, objdump
